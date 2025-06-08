@@ -1,0 +1,17 @@
+﻿{
+  "QA": {
+    "resetPassword": {
+      "email": "testqa@test.com"
+    },
+    "Registered_User": ["Reg_Shivam_QA", "Reg_Shivam_QA"],
+    "Default_Users": ["Shivam_QA", "Hashim_QA"]
+  },
+
+  "UAT": {
+    "resetPassword": {
+      "email": "testuat@test.com"
+    },
+    "Default_Users": ["Shivam_UAT", "Hashim_UAT"],
+    "Registered_User": ["Reg_Shivam_UAT", "Reg_Shivam_UAT"]
+  }
+}

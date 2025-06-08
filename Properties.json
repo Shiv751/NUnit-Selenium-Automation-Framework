@@ -1,0 +1,34 @@
+﻿{
+  "QA": {
+    "WebURL": "https://studyedc.sjm.com/my.policy",
+    "URL_1": "https://studyedc.sjm.com/my.policy",
+    "URL_2": "https://studyedc.sjm.com/my.policy",
+    "URL_3": "https://studyedc.sjm.com/my.policy",
+    "URL_4": "https://studyedc.sjm.com/my.policy",
+    "URL_5": "https://studyedc.sjm.com/my.policy",
+    "URL_6": "",
+    "URL_7": "https://studyedc.sjm.com/my.policy"
+  },
+
+  "UAT": {
+    "WebURL": "https://studyedc.sjm.com/my.policy",
+    "URL_1": "https://studyedc.sjm.com/my.policy",
+    "URL_2": "https://studyedc.sjm.com/my.policy",
+    "URL_3": "https://studyedc.sjm.com/my.policy",
+    "URL_4": "https://studyedc.sjm.com/my.policy",
+    "URL_5": "https://studyedc.sjm.com/my.policy",
+    "URL_6": "https://studyedc.sjm.com/my.policy",
+    "URL_7": "https://studyedc.sjm.com/my.policy"
+  },
+
+  "PROD": {
+    "WebURL": "https://studyedc.sjm.com/my.policy",
+    "URL_1": "https://studyedc.sjm.com/my.policy",
+    "URL_2": "https://studyedc.sjm.com/my.policy",
+    "URL_3": "https://studyedc.sjm.com/my.policy",
+    "URL_4": "https://studyedc.sjm.com/my.policy",
+    "URL_5": "https://studyedc.sjm.com/my.policy",
+    "URL_6": "https://studyedc.sjm.com/my.policy",
+    "URL_7": "https://studyedc.sjm.com/my.policy"
+  }
+}
