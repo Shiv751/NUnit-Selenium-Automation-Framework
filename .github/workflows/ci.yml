@@ -1,0 +1,41 @@
+name: CI - Test & Report
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+
+      - name: Run Tests
+        run: dotnet test --no-build --logger "trx;LogFileName=test_results.trx"
+
+      - name: Upload ExtentReport as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: extent-report
+          path: Reports/index.html
+
+      - name: Upload Screenshots as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: Reports/Screenshots/

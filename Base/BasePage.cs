@@ -133,7 +133,7 @@ namespace NUnitAutomationFramework.WebElements
                     test.Log(Status.Info, $"Clicked on '{text}'");
                 }
             }
-            catch (StaleElementReferenceException e)
+            catch (StaleElementReferenceException)
             {
                 try
                 {
@@ -218,7 +218,7 @@ namespace NUnitAutomationFramework.WebElements
         /// </summary>
         /// <param name="by">The locator used to find the web element.</param>
         /// <returns>Returns the text content of the web element.</returns>
-        public string GetText(By by)
+        public string? GetText(By by)
         {
             IWebElement element = WaitForElementToDisplay(by);
             if (element != null)

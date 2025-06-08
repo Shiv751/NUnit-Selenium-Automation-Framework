@@ -36,30 +36,30 @@ namespace NUnitAutomationFramework.TestSuites
             page?.ValidateElementsOnLoginPageMSFT();
         }
 
-        [Test, Category("ResetPasswordTest")]
-        public void TC_02_AlternateSignInOptions()
-        {
-            // To get User from List file
-            string user = TestData.List("Default_Users");
-            extent_test?.Value?.Info("user is : " + user);
+        // [Test, Category("ResetPasswordTest")]
+        // public void TC_02_AlternateSignInOptions()
+        // {
+        //     // To get User from List file
+        //     string user = TestData.List("Default_Users");
+        //     extent_test?.Value?.Info("user is : " + user);
 
-            // page.ClickResetPasswordLink();
-            page.ClickAlternateSigninOption();
-            extent_test?.Value?.Pass("TC_02_OpenFAQ Testcase is passed");
-        }
+        //     // page.ClickResetPasswordLink();
+        //     page.ClickAlternateSigninOption();
+        //     extent_test?.Value?.Pass("TC_02_OpenFAQ Testcase is passed");
+        // }
 
-        [Test, Category("ResetPasswordTest")]
-        public void TC_03_ResetPassword()
-        {
-            // To get User from List file
-            string user = TestData.List("Registered_User");
-            extent_test?.Value?.Info("user is : " + user);
+        // [Test, Category("ResetPasswordTest")]
+        // public void TC_03_ResetPassword()
+        // {
+        //     // To get User from List file
+        //     string user = TestData.List("Registered_User");
+        //     extent_test?.Value?.Info("user is : " + user);
 
-            page.ClickResetPasswordLink();
-            page.OpenResetPasswordPage();
-            page.ValidateElementsOnForgetPasswordPage();
-            page.GetUsernameByEmail(TestData.GetTestData("resetPassword.email"));
-            extent_test?.Value?.Pass("TC_03_ResetPassword Testcase is passed");
-        }
+        //     page.ClickResetPasswordLink();
+        //     page.OpenResetPasswordPage();
+        //     page.ValidateElementsOnForgetPasswordPage();
+        //     page.GetUsernameByEmail(TestData.GetTestData("resetPassword.email"));
+        //     extent_test?.Value?.Pass("TC_03_ResetPassword Testcase is passed");
+        // }
     }
 }

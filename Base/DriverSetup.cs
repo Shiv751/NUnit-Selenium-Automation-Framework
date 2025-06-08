@@ -70,13 +70,19 @@ namespace NUnitAutomationFramework.Base
         /// <returns>Returns an instance of the ChromeDriver with Chrome-specific desired capabilities set to start the browser maximized.</returns>
         public static IWebDriver SetChromeBrowser()
         {
+            // var chromeOptions = new ChromeOptions();
+            // chromeOptions.AddArgument("--start-maximized"); // Add Chrome-specific desired capabilities here
+            // chromeOptions.AddArgument("--start-maximized");
+            // chromeOptions.AddArgument("--start-maximized");
+            // chromeOptions.AddArgument("--start-maximized");
+            // chromeOptions.AddArgument("--start-maximized");
+            // chromeOptions.AddArgument("--start-maximized");
             var chromeOptions = new ChromeOptions();
-            chromeOptions.AddArgument("--start-maximized"); // Add Chrome-specific desired capabilities here
-            // chromeOptions.AddArgument("--start-maximized");
-            // chromeOptions.AddArgument("--start-maximized");
-            // chromeOptions.AddArgument("--start-maximized");
-            // chromeOptions.AddArgument("--start-maximized");
-            // chromeOptions.AddArgument("--start-maximized");
+            chromeOptions.AddArgument("--headless=new"); // or "--headless" for older Chrome
+            chromeOptions.AddArgument("--no-sandbox");
+            chromeOptions.AddArgument("--disable-dev-shm-usage");
+            chromeOptions.AddArgument("--window-size=1920,1080");
+            chromeOptions.AddArgument($"--user-data-dir=/tmp/chrome-user-data-{Guid.NewGuid()}");
             new DriverManager().SetUpDriver(new ChromeConfig());
             return new ChromeDriver(chromeOptions);
         }
